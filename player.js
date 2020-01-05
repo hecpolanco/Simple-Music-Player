@@ -8,10 +8,10 @@ const progressBar = document.querySelector('#progress-bar'); // element where pr
 let pPause = document.querySelector('#play-pause'); // element where play and pause image appears
 
 songIndex = 0;
-songs = ['./assets/music/beyonce.mp3', './assets/music/coldwar.mp3']; // object storing paths for audio objects
-thumbnails = ['./assets/images/lemonade.png', './assets/images/cautious.png']; // object storing paths for album covers and backgrounds
-songArtists = ['Beyonce', 'Cautious Clay']; // object storing track artists
-songTitles = ["Don't Hurt Yourself", "Cold War"]; // object storing track titles
+songs = ['./assets/music/beyonce.mp3', './assets/music/dontstartnow.mp3']; // object storing paths for audio objects
+thumbnails = ['./assets/images/lemonade.png', './assets/images/dontstartnow.png']; // object storing paths for album covers and backgrounds
+songArtists = ['Beyonce', 'Dua Lipa']; // object storing track artists
+songTitles = ["Don't Hurt Yourself", "Don't Start Now"]; // object storing track titles
 
 // function where pp (play-pause) element changes based on playing boolean value - if play button clicked, change pp.src to pause button and call song.play() and vice versa.
 let playing = true;
