@@ -77,19 +77,18 @@ function previousSong() {
 function updateProgressValue() {
     progressBar.max = song.duration;
     progressBar.value = song.currentTime;
-    document.querySelector('.currentTime').innerHTML = (formatSecondsAsTime(Math.floor(song.currentTime)));
+    document.querySelector('.currentTime').innerHTML = (formatTime(Math.floor(song.currentTime)));
     if (document.querySelector('.durationTime').innerHTML === "NaN:NaN") {
         document.querySelector('.durationTime').innerHTML = "0:00";
     } else {
-        document.querySelector('.durationTime').innerHTML = (formatSecondsAsTime(Math.floor(song.duration)));
+        document.querySelector('.durationTime').innerHTML = (formatTime(Math.floor(song.duration)));
     }
 };
 
 // convert song.currentTime and song.duration into MM:SS format
-function formatSecondsAsTime(secs) {
-    let hr  = Math.floor(secs / 3600);
-    let min = Math.floor((secs - (hr * 3600))/60);
-    let sec = Math.floor(secs - (hr * 3600) -  (min * 60));
+function formatTime(seconds) {
+    let min = Math.floor((seconds / 60);
+    let sec = Math.floor(seconds - (min * 60));
     if (sec < 10){ 
         sec  = `0${sec}`;
     };
